@@ -1,0 +1,41 @@
+* Player   -> Piet  -> Maandag
+	Basic character en animation
+	Walk, jump idle
+	
+* Basic platform -> Danie -> Maandag
+	Rigid body ( Kinematic - no movement )
+	collider
+	Blender
+	
+* CameraMovement -> Danie
+	(  Cinemachine )
+
+* Gamecontroller -> Piet
+	Singleton
+	
+* Gameplay Controller - Piet
+	Static instance, nie singleton nie
+
+* AudioManager -> Piet
+
+* Obstacles
+	5 * each
+		Box
+		Dromme
+		
+		
+
+* Scrolling background
+
+* Traps
+
+* Conveyer belde
+
+* Enemies
+
+* Pickups
+
+
+
+Example 2.5D game
+https://www.youtube.com/watch?v=kvL7O0gPOT0&list=PL0WgRP7BtOexkgEO9lOVubYnagjjbU2CI&index=2
