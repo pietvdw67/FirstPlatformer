@@ -4,15 +4,29 @@ ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable:
   - first:
-      74: 4699274299699868179
-    second: PlayerIdle
+      74: 5539831331247536789
+    second: Jump
   - first:
-      74: -2969036542940970518
-    second: PlayerRun
+      74: 7664120462568309158
+    second: Jump.001
   - first:
-      74: 7168972985768442993
-    second: Armature.001|TPose
-  externalObjects: {}
+      74: -8945691123924629249
+    second: Armature|Idle
+  - first:
+      74: 1079665108409675491
+    second: Armature|Jump
+  - first:
+      74: -7551964380084998518
+    second: Armature|Run
+  - first:
+      74: 5152524018116331999
+    second: Armature|TPose
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GirlMat
+    second: {fileID: 2100000, guid: 8849c23ad5e575242b44896e3ac0455f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -41,8 +55,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: PlayerIdle
-      takeName: Armature.001|Idle
+      name: Armature|Idle
+      takeName: Armature|Idle
       internalID: 0
       firstFrame: 0
       lastFrame: 39
@@ -53,7 +67,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -70,8 +84,37 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: PlayerRun
-      takeName: Armature.001|Run
+      name: Armature|Jump
+      takeName: Armature|Jump
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Run
+      takeName: Armature|Run
       internalID: 0
       firstFrame: 0
       lastFrame: 22
@@ -82,35 +125,6 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Armature.001|TPose
-      takeName: Armature.001|TPose
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -190,7 +204,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

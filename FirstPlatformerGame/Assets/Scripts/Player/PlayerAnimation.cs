@@ -15,4 +15,9 @@ public class PlayerAnimation : MonoBehaviour
     {
         anim.SetBool("isRun", isRun);
     }
+
+    public void PlayJumpAnimation(bool isJump)
+    {
+        anim.SetBool("isJump", isJump);
+    }
 }
