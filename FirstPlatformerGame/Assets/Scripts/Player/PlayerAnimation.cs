@@ -20,4 +20,9 @@ public class PlayerAnimation : MonoBehaviour
     {
         anim.SetBool("isJump", isJump);
     }
+
+    public void PlayIdleWave(bool isIdleWave)
+    {
+        anim.SetBool("isIdleWave", isIdleWave);
+    }
 }

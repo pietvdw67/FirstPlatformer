@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isDelayGroundCheck;
     public float radius = 0.3f;
 
+    float idleCounter = 0;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody>();
@@ -31,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         sideMovement = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        idleCounter++;
 
         if (jumpPressed == false)
         {
@@ -42,7 +45,17 @@ public class PlayerMovement : MonoBehaviour
         PlayerMove();
         SetGrounded();
         PlayerJump();
+        PlayerIdle();
 
+    }
+
+    private void PlayerIdle()
+    {
+        // Wave currently only when looking right
+        if (idleCounter >= 1000 && transform.localScale.x == 1)
+        {
+            playerAnim.PlayIdleWave(true);
+        }
     }
 
     private void PlayerMove()
@@ -53,12 +66,16 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(1, 1, 1);
             playerAnim.PlayRunAnimation(true);
+            playerAnim.PlayIdleWave(false);
+            idleCounter = 0;
 
         }
         else if (sideMovement < 0)
         {
             playerAnim.PlayRunAnimation(true);
             transform.localScale = new Vector3(-1f, 1, -1);
+            playerAnim.PlayIdleWave(false);
+            idleCounter = 0;
         }
         else
         {
@@ -106,5 +123,14 @@ public class PlayerMovement : MonoBehaviour
     {
         isDelayGroundCheck = false;
     }
+
+    private void StopIdleWave()
+    {
+        idleCounter = 0;
+        playerAnim.PlayIdleWave(false);
+        
+    }
+
+    
 
 }
