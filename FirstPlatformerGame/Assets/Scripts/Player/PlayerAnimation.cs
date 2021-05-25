@@ -25,4 +25,9 @@ public class PlayerAnimation : MonoBehaviour
     {
         anim.SetBool("isIdleWave", isIdleWave);
     }
+
+    public void PlayFire(bool isFire)
+    {        
+        anim.SetBool("isFire", isFire);
+    }
 }

@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     float sideMovement;
     private bool jumpPressed;
+    private bool firePressed;
     private bool isGrounded;
     private bool isDelayGroundCheck;
     public float radius = 0.3f;
@@ -39,6 +40,11 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpPressed = Input.GetKeyDown(KeyCode.Space);            
         }
+
+        if (firePressed == false)
+        {
+            firePressed = Input.GetKeyDown(KeyCode.LeftControl);
+        }
     }
     private void FixedUpdate()
     {
@@ -46,7 +52,24 @@ public class PlayerMovement : MonoBehaviour
         SetGrounded();
         PlayerJump();
         PlayerIdle();
+        PlayerFire();
 
+    }
+
+    private void PlayerFire()
+    {
+        if (firePressed)
+        {
+            playerAnim.PlayFire(true);
+            firePressed = false;
+            Invoke("StopFire", 0.25f);
+
+        }
+    }
+
+    private void StopFire()
+    {
+        playerAnim.PlayFire(false);
     }
 
     private void PlayerIdle()
